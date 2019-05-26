@@ -1,0 +1,273 @@
+/* layout styles listed in order of occurrence */
+body {
+	display: grid;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	grid-auto-rows: auto;
+	grid-template-areas: "sidebar header header header"
+      "sidebar main main main"
+      "sidebar main main main";
+}
+
+.l-header-main {
+	background-color: #ffffff;
+	color: #091034;
+	grid-area: header;
+	line-height: 70%;
+	margin-bottom: 10%;
+	padding-left: 5%;
+}
+
+.l-main-content {
+	background-color: #ffffff;
+	color: #091034;
+	grid-area: main;
+	padding-left: 5%;
+}
+
+.l-education,
+  .l-experience,
+  .l-reference {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.l-sidebar {
+	background-color: #5A18C9;
+	color: #e6e6e6;
+	display: flex;
+	flex-direction: column;
+	grid-area: sidebar;
+}
+
+.l-sidebar a {
+	align-self: center;
+	justify-self: center;
+}
+
+.l-details-container {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+
+.l-about-me-container {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	margin: 5%;
+	padding: 1%;
+	width: 80%;
+}
+
+.l-hobbies-container {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	margin: 5%;
+	padding: 1%;
+	width: 80%;
+}
+  /* End of layout styles */
+
+  /* Base styles listed in order of occurrence */
+h1 {
+	color: #340933;
+}
+
+h2 {
+	color: #9A0794;
+	margin-left: 5%;
+}
+
+h3 {
+	color: #5A18C9;
+}
+
+h4 {
+	color: #340933;
+}
+
+hr {
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	border: 0;
+	height: 1px;
+}
+
+img {
+	border-radius: 50%;
+	padding-bottom: 5%;
+	padding-top: 5%;
+}
+
+  /* End of Base styles */
+  
+  /* Module styles listed in order of occurrence */
+
+.christian-name {
+	color: #9A0794;
+	font-weight: 900;
+	margin-right: 1%;
+}
+
+.freelance {
+	border-bottom: 2px solid #9A0794;
+}
+
+.education-title,
+.experience-title,
+.references-title {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.fas {
+	color: #8A8AEF;
+	line-height: 50%;
+}
+
+.education-header,
+.experience-header,
+.references-header {
+	margin-left: 3%;
+}
+
+.fa-bowling-ball {
+	color: #340933;
+	justify-self: flex-end;
+	padding-right: 2%;
+	padding-top: 2.5%;
+	width: 1%;
+}
+
+.dates {
+	line-height: 50%;
+	padding-left: 1%;
+	padding-top: 1%;
+	width: 29%;
+}
+
+.description {
+	margin-right: 10%;
+	padding-left: 1%;
+	width: 60%;
+}
+
+.company {
+	margin-right: 10%;
+	padding-left: 1%;
+	width: 70%;
+}
+
+.ref {
+	width: 50%;
+}
+
+.contact-header {
+	align-content: flex-start;
+	background-color: #0d0d0d;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+}
+
+.contact-details {
+	align-content: flex-start;
+	color: #e6e6e6;
+	display: flex;
+	flex-direction: column;
+	margin: 5%;
+	padding: 1%;
+}
+
+.contact-details {
+	line-height: 1%;
+}
+
+.about-me-header {
+	background-color: #0d0d0d;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+}
+
+.hobbies-header {
+	background-color: #0d0d0d;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+}
+
+.footer-images {
+	align-self: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.f-image {
+	background-color: #ffffff;
+	border-radius: 50%;
+	justify-self: center;
+	margin: 5% 5% 5% 5%;
+	padding: 5%;
+}
+
+.w3c-validation-para {
+	align-self: center;
+}
+/* End of module styles */
+
+/* State styles start listed in order of occurrence */
+.contact-details:hover {
+	color: #c10000;
+}
+/* End of state styles */
+  
+@media (max-width: 768px) {
+  /* Base listed in order of occurrence */
+	h2 {
+		margin-left: 1%;
+		padding-left: 1%;
+		width: 40%;
+	}
+  /* End of Base styles */
+
+  /* Layout styles listed in order of occurrence */
+	body {
+		display: grid;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-size: 1em;
+		grid-template-areas: "header header header header"
+    "main main main main"
+    "sidebar sidebar sidebar sidebar";
+		grid-template-rows: auto;
+	}
+  /* End of Layout styles */
+  
+  /* Modules styles */
+	.fa-bowling-ball {
+		color: #340933;
+		justify-self: flex-end;
+		padding-right: 2%;
+		padding-top: 3%;
+	}
+}
+
+@media (min-width:320px) and (max-width: 414px) {
+  /* Module style */
+	.fa-bowling-ball {
+		color: #340933;
+		justify-self: flex-end;
+		padding-right: 2%;
+		padding-top: 5%;
+	}
+}  
+
+
