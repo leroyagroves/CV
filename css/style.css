@@ -1,102 +1,99 @@
 /* styles.css */
 
-/* layout styles listed in order of occurrence */
-/* body {
-	display: grid;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	grid-auto-rows: auto;
-	grid-template-areas: "sidebar header header header"
-      "sidebar main main main"
-      "sidebar main main main";
-} */
+
+/* Beginning of Layout Styles */
 
 body {
-	display: grid;
+	background-color: #ffffff;
+	display: flex;
+	flex-wrap: wrap;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 1em;
-	grid-template-areas: "header header header header"
-	"main main main main"
-	"sidebar sidebar sidebar sidebar";
-	grid-template-rows: auto;
+	justify-content: stretch;
+}
+
+.l-header-main,
+.l-main-content,
+.l-sidebar {
+	align-items: center;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	width: 100%;
 }
 
 .l-header-main {
 	background-color: #ffffff;
 	color: #091034;
-	grid-area: header;
-	line-height: 70%;
-	margin-bottom: 10%;
-	padding-left: 5%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	line-height: 1%;
 }
 
 .l-main-content {
-	background-color: #ffffff;
 	color: #091034;
-	grid-area: main;
-	padding-left: 5%;
 }
 
-.l-education,
-  .l-experience,
-  .l-reference {
+.l-education1 {
+	align-items: center;
+	align-self: center;
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.l-education2 {
+	align-items: center;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .l-sidebar {
 	background-color: #5A18C9;
 	color: #e6e6e6;
-	display: flex;
-	flex-direction: column;
-	grid-area: sidebar;
 }
 
-.l-sidebar a {
-	align-self: center;
-	justify-self: center;
+.l-sidebar img {
+	border-radius: 50%;
+	margin: 1em auto;
 }
 
 .l-details-container {
-	align-items: flex-start;
 	display: flex;
 	flex-direction: column;
-	width: 80%;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .l-about-me-container {
-	align-items: flex-start;
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	margin: 5%;
-	padding: 1%;
-	width: 80%;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 .l-hobbies-container {
-	align-items: flex-start;
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	margin: 5%;
-	padding: 1%;
-	width: 80%;
+	flex-wrap: wrap;
+	justify-content: center;
 }
-  /* End of layout styles */
 
-  /* Base styles listed in order of occurrence */
+
+/* End of layout styles */
+
+
+/* Base styles listed in order of occurrence */
+
 h1 {
 	color: #340933;
-}
-
-/* h2 {
-	color: #9A0794;
-	margin-left: 5%;
-} */
-
-h2 {
-	margin-left: 1%;
-	padding-left: 1%;
-	width: 40%;
 }
 
 h3 {
@@ -107,21 +104,36 @@ h4 {
 	color: #340933;
 }
 
+h5 {
+	font-size: 1em;
+	line-height: 1%;
+	text-decoration-color: #9A0794;
+	text-decoration-line: underline;
+}
+
 hr {
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 	border: 0;
 	height: 1px;
+	width: 60%;
 }
 
-img {
-	border-radius: 50%;
-	padding-bottom: 5%;
-	padding-top: 5%;
+.header-hr {
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	border: 0;
+	height: 1px;
+	width: 90%;
 }
 
-  /* End of Base styles */
-  
-  /* Module styles listed in order of occurrence */
+a {
+	color: #0d0d0d;
+}
+
+
+/* End of Base styles */
+
+
+/* Module styles listed in order of occurrence */
 
 .christian-name {
 	color: #9A0794;
@@ -137,87 +149,49 @@ img {
 .experience-title,
 .references-title {
 	align-items: center;
+	align-self: center;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
 }
 
-.fas {
-	color: #8A8AEF;
-	line-height: 50%;
+.fa-graduation-cap,
+.fa-briefcase,
+.fa-pen-fancy {
+	margin-left: 5%;
+	margin-right: 5%;
 }
-
-.education-header,
-.experience-header,
-.references-header {
-	margin-left: 3%;
-}
-
-/* .fa-bowling-ball {
-	color: #340933;
-	justify-self: flex-end;
-	padding-right: 2%;
-	padding-top: 2.5%;
-	width: 1%;
-} */
 
 .fa-bowling-ball {
-	color: #340933;
-	justify-self: flex-end;
-	padding-right: 2%;
-	padding-top: 3%;
+	visibility: hidden;
 }
 
 .dates {
-	line-height: 50%;
-	padding-left: 1%;
-	padding-top: 1%;
-	width: 29%;
+	line-height: 10%;
 }
 
 .description {
-	margin-right: 10%;
-	padding-left: 1%;
-	width: 60%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.company {
-	margin-right: 10%;
-	padding-left: 1%;
-	width: 70%;
-}
-
-.ref {
-	width: 50%;
+.description>h3,
+.description>h4 {
+	align-self: center;
+	line-height: 10%;
 }
 
 .contact-header {
-	align-content: flex-start;
-	/* align-content: center; */
 	background-color: #0d0d0d;
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
 	width: 100%;
-}
-
-.contact-details {
-	align-content: flex-start;
-	color: #e6e6e6;
-	display: flex;
-	flex-direction: column;
-	margin: 5%;
-	padding: 1%;
-}
-
-.contact-details {
-	line-height: 1%;
 }
 
 .about-me-header {
 	background-color: #0d0d0d;
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
 	width: 100%;
 }
@@ -225,55 +199,136 @@ img {
 .hobbies-header {
 	background-color: #0d0d0d;
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
 	width: 100%;
 }
 
 .footer-images {
-	align-self: center;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	justify-self: center;
 }
 
 .f-image {
-	background-color: #ffffff;
-	border-radius: 50%;
-	justify-self: center;
-	margin: 5% 5% 5% 5%;
-	padding: 5%;
+	background-color: #000000;
+	border-radius: 20%;
+	margin: 15% 15% 15% 15%;
 }
 
-.w3c-validation-para {
-	align-self: center;
-}
-/* End of module styles */
 
-/* State styles start listed in order of occurrence */
-.contact-details:hover {
-	color: #c10000;
-}
-/* End of state styles */
+/* End of Module Styles */
 
-@media (min-width: 768px) {
+@media only screen and (min-width:1024px) {
+	/* Beginning of Layout Styles */
 	body {
 		display: grid;
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-size: 1em;
 		grid-auto-rows: auto;
-		grid-template-areas: "sidebar header header header"
-		  "sidebar main main main"
-		  "sidebar main main main";
+		grid-gap: 1em;
+		grid-template-columns: repeat(12, 1fr);
+		justify-content: stretch;
+		width: 100%;
 	}
-	
+	.l-header-main {
+		display: grid;
+		grid-auto-rows: auto;
+		grid-column: 4/12;
+		grid-row: 1/3;
+		grid-template-columns: 1fr;
+		justify-content: start;
+	}
+	.l-main-content {
+		display: grid;
+		grid-auto-rows: auto;
+		grid-column: 4/12;
+		grid-row: 4/20;
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
+	.l-education1,
+	.l-education2,
+	.l-education3,
+	.l-education4 {
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns: 15% 35% 50%;
+	}
+	.l-experience {
+		display: grid;
+		grid-template-columns: 15% 35% 50%;
+		grid-auto-rows: auto;
+	}
+	.l-reference {
+		display: grid;
+		grid-template-columns: 45% 45%;
+		grid-auto-rows: auto;
+		grid-column-gap: 8em;
+		justify-content: center;
+		justify-self: center;
+	}
+	.l-sidebar {
+		align-items: center;
+		grid-column: 1/4;
+		grid-row: 1/20;
+		justify-content: center;
+	}
+	/* End of Layout Styles */
+	/* Beginning of Base Styles */
+	hr {
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+		border: 0;
+		height: 1px;
+		width: 80%;
+	}
+	/*End of Base Styles  */
+	/*Beginning of Modules Styles  */
+	.dates {
+		height: 100%;
+	}
+	.description {
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns: 1fr;
+	}
+	.education-title,
+	.experience-title,
+	.references-title {
+		display: grid;
+		grid-auto-rows: auto;
+		grid-gap: 1em;
+		grid-template-columns: 16% 84%;
+	}
+	.fa-graduation-cap,
+	.fa-briefcase,
+	.fa-pen-fancy {
+		justify-self: end;
+	}
+	.img-container {
+		align-items: center;
+		align-self: center;
+		display: grid;
+		grid-auto-rows: auto;
+		grid-column: 1/4;
+		grid-row: 1/2;
+		grid-template-columns: 1fr;
+		justify-content: center;
+		justify-self: center;
+		margin: auto 1em;
+	}
+	img {
+		align-self: center;
+		margin: auto;
+	}
 	.fa-bowling-ball {
-		color: #340933;
-		justify-self: flex-end;
-		padding-right: 2%;
-		padding-top: 2.5%;
-		width: 1%;
-	}	
+		align-self: start;
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns: 1fr;
+		justify-self: end;
+		padding-right: 10px;
+		padding-top: 13px;
+		visibility: visible;
+	}
 }
-  
-
-

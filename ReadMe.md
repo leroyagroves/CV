@@ -10,13 +10,16 @@ This cv represents one of the first coding / web development projects that I hav
 
 ## Technologies
 ---
+
+The mobile and table version of the site has been prepared using _CSS Flexbox_ whilst the desktop version of the site has been prepared with _CSS Grids_.
+
 _HTML_ and _CSS_ have been checked using validators.  
 
 The _HTML_ and _CSS_ have been formatted using inline beautifiers so as to ensure that they are easy to read.
 
-CSS Grids have been used for the general structure of the document and Flex Box has been used for _fine tuning_.  
-
 A general _SMACSS_ approach has been used to order the CSS. That is, the CSS code has been separated into _Base_, _Layoout_, _Module_ and _State_ sections.
+
+Icons have been acquired from _Font Awesome_. 
 
 ## Acknowledgments
 ___
