@@ -129,6 +129,10 @@ hr {
 	color: #fff;
 }
 
+.l-about-me-container p {
+	padding: 1em;
+}
+
 a {
 	color: #ffffaa;
 }
